@@ -9,12 +9,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#12203A;
-    --ink-2:#0D1830;
-    --paper:#EDEFE6;
-    --signal:#F2542D;
-    --line:#4A6FA5;
-    --muted:#8AA0C4;
+    --ink:#171717;
+    --ink-2:#171717;
+    --paper:#EDEDED;
+    --signal:#D2F28D;
+    --line:#5298F2;
+    --muted:rgba(237,237,237,0.62);
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
@@ -31,12 +31,12 @@
   .grid-bg{
     position:fixed;inset:0;z-index:-1;
     background-image:
-      linear-gradient(rgba(74,111,165,0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(74,111,165,0.08) 1px, transparent 1px);
+      linear-gradient(rgba(82,152,242,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(82,152,242,0.08) 1px, transparent 1px);
     background-size:32px 32px;
   }
 
-  /* corner registration marks — signature motif */
+  /* corner registration marks - signature motif */
   .reg{position:fixed;width:18px;height:18px;border-color:var(--line);opacity:0.5;z-index:2;}
   .reg::before,.reg::after{content:'';position:absolute;background:var(--line);}
   .reg::before{width:100%;height:1px;top:50%;}
@@ -78,7 +78,7 @@
   .btn-outline{border:1px solid var(--line);color:var(--paper);}
   .btn-outline:hover{border-color:var(--paper);}
 
-  section{padding:56px 0;border-top:1px solid rgba(74,111,165,0.25);}
+  section{padding:56px 0;border-top:1px solid rgba(82,152,242,0.25);}
   .label{
     font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;
     text-transform:uppercase;color:var(--line);margin-bottom:28px;
@@ -111,27 +111,6 @@
     margin-top:7px;transform:rotate(45deg);
   }
 
-  /* pricing */
-  .tiers{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-  @media (max-width:600px){.tiers{grid-template-columns:1fr;}}
-  .tier{
-    border:1px solid rgba(74,111,165,0.4);padding:26px;border-radius:2px;
-    position:relative;
-  }
-  .tier.featured{border-color:var(--signal);}
-  .tier .tag{
-    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;
-    text-transform:uppercase;color:var(--muted);margin-bottom:10px;
-  }
-  .tier.featured .tag{color:var(--signal);}
-  .tier h4{font-family:'Space Grotesk',sans-serif;font-size:22px;margin-bottom:8px;}
-  .tier .desc{color:var(--muted);font-size:14px;margin-bottom:18px;}
-  .tier .price{
-    font-family:'Space Grotesk',sans-serif;font-size:15px;color:var(--paper);
-    font-weight:600;padding-top:14px;border-top:1px dashed rgba(74,111,165,0.4);
-  }
-  .tier .price small{display:block;color:var(--muted);font-weight:400;font-size:12px;margin-top:4px;font-family:'Inter',sans-serif;}
-
   footer{padding:64px 0 96px;text-align:center;}
   footer h2{
     font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,4vw,32px);
@@ -154,10 +133,9 @@
   <header>
     <div class="eyebrow">Operations Build</div>
     <h1>Idea to <span>Operations</span> in 90 days.</h1>
-    <p class="sub">For solo founders and small teams turning an idea into a business that actually runs — without you being the only system that works.</p>
+    <p class="sub">For solo founders and small teams turning an idea into a business that actually runs - without you being the only system that works.</p>
     <div class="ctas">
-      <a href="#pricing" class="btn btn-solid">See pricing →</a>
-      <a href="mailto:you@example.com" class="btn btn-outline">Start a conversation</a>
+      <a href="mailto:you@example.com" class="btn btn-solid">Book a discovery call</a>
     </div>
   </header>
 
@@ -168,14 +146,14 @@
         <div class="num">01</div>
         <div>
           <h3>Foundation</h3>
-          <p>Map the real workflow your business needs, set up the core tools (project management, payments, contacts), and define who owns what.</p>
+          <p>I map out exactly how your business needs to run - from creating a business identity to setting up structures that welcome your first client. You walk away with a written map of your workflow and working tools ready to use, not just a list of recommendations.</p>
         </div>
       </div>
       <div class="stage">
         <div class="num">02</div>
         <div>
           <h3>Build the engine</h3>
-          <p>Write SOPs for the processes that matter most at launch, build trackers for money and progress, and create templates so nothing starts from scratch.</p>
+          <p>Write SOPs for the processes that matter most at launch, set up payment processing so you can get paid, and create templates so nothing starts from scratch.</p>
         </div>
       </div>
       <div class="stage">
@@ -193,27 +171,12 @@
     <ul class="checks">
       <li>Core workflow &amp; tool setup</li>
       <li>SOPs for your most important processes</li>
-      <li>Trackers for money, capacity, and progress</li>
+      <li>Onboarding forms &amp; email sequence</li>
+      <li>Job descriptions for incoming hires</li>
+      <li>Social accounts opened</li>
+      <li>Domain set up and landing page</li>
       <li>A launch-ready operations manual</li>
     </ul>
-  </section>
-
-  <section id="pricing">
-    <div class="label">Flat Fee. Fixed Scope.</div>
-    <div class="tiers">
-      <div class="tier">
-        <div class="tag">Solo Founder</div>
-        <h4>Building it alone</h4>
-        <p class="desc">You're the whole team. We set up systems built for one person to run without burning out.</p>
-        <div class="price">Flat project fee<small>Quoted after a short discovery call</small></div>
-      </div>
-      <div class="tier featured">
-        <div class="tag">Small Team</div>
-        <h4>Building with others</h4>
-        <p class="desc">Same 90-day build, plus role mapping and coordination so everyone knows what they own.</p>
-        <div class="price">Flat project fee<small>Quoted after a short discovery call</small></div>
-      </div>
-    </div>
   </section>
 
   <footer>
